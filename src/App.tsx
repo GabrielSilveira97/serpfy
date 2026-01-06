@@ -1,5 +1,6 @@
 import AISectionComponent from "./components/layout/AISection"
 import CommentsSectionComponent from "./components/layout/Comments"
+import CTASectionComponent from "./components/layout/CTASection"
 import HeroComponent from "./components/layout/Hero"
 import MetricsSectionComponent from "./components/layout/Metrics"
 import NavbarComponent from "./components/layout/Navbar"
@@ -20,6 +21,7 @@ function App() {
       <MetricsSectionComponent/>
       <CommentsSectionComponent/> 
       <ScoreSectionComponent/>
+      <CTASectionComponent/>
     </main>
   )
 }

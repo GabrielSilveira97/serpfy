@@ -14,7 +14,11 @@ const HeroComponent = () => {
                 </div>
                 <div className="hidden md:flex flex-col">
                     <img className="" src="/hero-image.svg" alt="Imagem" />
-                    <p>descriçãozinha</p>
+                    <div className="flex items-center gap-2">
+                        <img src="/shape-1.svg" alt="" className="size-7" />
+                        <p>descriçãozinha</p>
+                    </div>
+                    
                 </div>
                 
             </div>

@@ -15,8 +15,12 @@ function App() {
   return (
     <main className="text-white">
       <NavbarComponent/>
-      <HeroComponent/>
-      <TrustedComponent/>
+      <div id="hero-section">
+        <HeroComponent/>
+      </div>
+      <div id="trusted-section">
+        <TrustedComponent/>
+      </div>
       <ToolkitCardsComponent/>
       <AISectionComponent/>
       <MetricsSectionComponent/>

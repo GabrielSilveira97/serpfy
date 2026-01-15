@@ -12,7 +12,7 @@ const MetricsSectionComponent = () => {
         <motion.section initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }} className="py-28  border-b-[0.5px] border-white/40 md:border-none">
-            <h1 className="text-center md:text-6xl text-4xl font-semibold">Plataformas do mundo inteiro confiam no Serpfy</h1>
+            <h1 className="text-center md:text-6xl text-4xl font-semibold px-2 md:px-20">Plataformas do mundo inteiro confiam no Serpfy</h1>
             <ul className="flex flex-col md:flex-row justify-evenly gap-20 items-center pt-20 px-2 md:px-20">
                 <motion.li initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

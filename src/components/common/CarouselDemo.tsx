@@ -18,7 +18,7 @@ export const cards = [
       "item 2",
       "item 3"
     ],
-    image: "graph-front_2.webp",
+    image: "/graph-front_2.webp",
     buttonText: "Teste Tráfego & Mercado"
   },
   {
@@ -29,7 +29,7 @@ export const cards = [
       "item 2",
       "item 3"
     ],
-    image: "graph-front_1.webp",
+    image: "/graph-front_1.webp",
     buttonText: "Teste Social"
   },
   {
@@ -40,7 +40,7 @@ export const cards = [
       "item 2",
       "item 3"
     ],
-    image: "graph-front_3.webp",
+    image: "/graph-front_3.webp",
     buttonText: "Teste Local"
   },
   {
@@ -51,7 +51,7 @@ export const cards = [
       "item 2",
       "item 3"
     ],
-    image: "graph-front_4.webp",
+    image: "/graph-front_4.webp",
     buttonText: "Teste Conteúdo"
   },
   {
@@ -62,7 +62,7 @@ export const cards = [
       "item 2",
       "item 3"
     ],
-    image: "graph-back_6.webp",
+    image: "/graph-back_6.webp",
     buttonText: "Teste IA"
   }
 ]
@@ -81,9 +81,14 @@ export function CarouselDemo() {
               <div className="">
                 <Card>
                   <CardContent className="flex aspect-square flex-col">
-                    <div className="w-full">
-                      <div className="flex items-center gap-3">
-                        <img src={card.logoPath} alt="" />
+                    <div className="w-full flex flex-col h-full">
+                      <div className="flex items-center gap-3 mb-2">
+                        <img 
+                          src={card.logoPath} 
+                          alt={`Logo ${card.title}`}
+                          className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                          loading="eager"
+                        />
                         <h1 className="text-2xl font-semibold">{card.title}</h1>
                       </div>
                       <ul className="list-disc px-5 flex flex-col gap-4 py-3">
@@ -94,10 +99,15 @@ export function CarouselDemo() {
                         })}
 
                       </ul>
-                      <div className="flex justify-center w-full ">
-                        <img src={card.image} alt={card.title} className="w-full shadow-xl py-3 max-h-62" />
+                      <div className="flex justify-center items-center w-full h-[200px] md:h-[240px] overflow-hidden rounded-lg bg-muted/20">
+                        <img 
+                          src={card.image} 
+                          alt={`Gráfico ${card.title}`} 
+                          loading="lazy"
+                          className="w-full h-full object-contain shadow-lg transition-transform duration-300 hover:scale-105" 
+                        />
                       </div>
-                      <Button className="w-full py-6 text-xl font-semibold">{card.buttonText}</Button>
+                      <Button className="w-full py-6 text-xl font-semibold mt-auto">{card.buttonText}</Button>
                     </div>
                   </CardContent>
                 </Card>

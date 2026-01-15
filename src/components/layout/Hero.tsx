@@ -1,7 +1,9 @@
 import { Button } from "../ui/button";
+import { AnimatePresence, motion } from "motion/react";
 
 const HeroComponent = () => {
     return(
+        <AnimatePresence>
         <section className="md:h-screen flex flex-col px-2 md:px-20">
             <div className="flex justify-center md:justify-start items-center h-20">
                 <h1>Logo</h1>
@@ -13,8 +15,9 @@ const HeroComponent = () => {
                     <Button className="px-20 py-7 text-xl rounded-lg">Teste Grátis 7 Dias</Button>
                 </div>
                 <div className="hidden md:flex flex-col relative gap-10">
-                    <div className="relative inline-block">
-                        <div 
+                    <div className="relative inline-block ">
+                        <motion.div 
+                            
                             className="absolute bg-secondary rounded-2xl"
                             style={{
                                 width: '95%',
@@ -37,6 +40,7 @@ const HeroComponent = () => {
 
             </div>
         </section>
+        </AnimatePresence>
     )
 }
 

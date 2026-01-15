@@ -6,7 +6,7 @@ const HeroComponent = () => {
         <AnimatePresence>
         <section className="md:h-screen flex flex-col px-2 md:px-20">
             <div className="flex justify-center md:justify-start items-center">
-                <img src="logo.png" alt="logo" width={150} className="md:pt-5 py-5" />
+                <img src="logo.png" alt="logo" className="md:pt-5 py-8 w-[200px] md:w-[150px]" />
             </div>
             <div className="flex h-full justify-center md:justify-between items-center gap-10 w-full">
                 <motion.div                         initial={{ y: 50, opacity: 0 }}
@@ -14,7 +14,7 @@ const HeroComponent = () => {
                         transition={{ duration: 0.6, ease: "easeOut" }} className="flex flex-col items-center md:items-start gap-10 w-full md:w-auto">
                     <h1 
 
-                        className="text-center md:text-start md:text-6xl text-5xl font-semibold"
+                        className="text-center md:text-start md:text-6xl text-4xl font-semibold"
                     >
                         <span className="text-secondary">Monitore e Aumente</span> seu SEO com precisão
                     </h1>

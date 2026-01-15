@@ -36,7 +36,7 @@ const TrustedComponent = () => {
                 <h1 className="px-6 lg:px-10 font-semibold">Confiado por</h1>
                 <div  className="flex-1 h-px bg-accent/60"/>
             </div>
-            <div className="flex justify-evenly flex-wrap">
+            <div className="flex justify-evenly flex-wrap-2">
                 {trustedOnes.map((trusted) => {
                     return(
                         <img key={trusted.id} src={trusted.image} width={50} className="drop-shadow-xl" alt={trusted.name} />

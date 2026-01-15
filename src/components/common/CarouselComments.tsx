@@ -14,21 +14,22 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 const cards = [
   {
     id: 1,
-    title: "Sugar Geek Show converted a free blog into a 6-figure business",
+    title: "Sugar Geek Show transformou um blog gratuito em um negócio de seis dígitos",
     list: {
-      listTitle: "Try it yourself",
+      listTitle: "Experimente você também",
       items: [
-        "Find the topics your customers care about and pump out content in an instant with AI Writing Tools.",
-        "Uncover competitors’ winning strategies that you’re missing out on with Domain Overview.",
-        "Keep track of your search rankings with Position Tracking so your audience always finds you first.",
+        "Descubra os temas que seus clientes realmente valorizam e gere conteúdos em instantes com ferramentas de escrita com IA.",
+        "Revele as estratégias vencedoras dos concorrentes que você ainda não está aproveitando com o Domain Overview.",
+        "Acompanhe suas posições nos mecanismos de busca com o Position Tracking e garanta que seu público sempre encontre você primeiro.",
       ],
     },
     comment: {
       quote:
-        "Semrush has everything you need for SEO. Now we're up to 2.8M monthly views and 6-figure revenue.",
+        "O Serpfy tem tudo o que você precisa para SEO. Hoje, alcançamos 2,8 milhões de visualizações mensais e uma receita de seis dígitos.",
       author: {
         name: "Liz Marek",
-        role: "Founder, Sugar Geek Show",
+        role: "Fundadora, Sugar Geek Show",
+        avatar: "/photo-1.webp"
       },
     },
     imgPath: "/graph_1.svg",
@@ -48,8 +49,9 @@ const cards = [
       quote:
         "Depois de usar o Serpfy, tivemos um aumento consistente de tráfego orgânico e mais leads qualificados.",
       author: {
-        name: "Ana Silva",
-        role: "Head de Marketing, Loja Exemplo",
+        name: "Aaron Dicks",
+        role: "Editor chefe, Impression Digital",
+        avatar:"/photo-2.webp"
       },
     },
     imgPath: "/graph_2.svg",
@@ -125,7 +127,7 @@ export function CarouselComments() {
                         </p>
                         <div className="flex items-center gap-3 mt-6">
                           <Avatar className="size-12">
-                            <AvatarImage src="https://github.com/shadcn.png" />
+                            <AvatarImage src={card.comment.author.avatar} />
                             <AvatarFallback>LM</AvatarFallback>
                           </Avatar>
                           <div>
@@ -136,7 +138,7 @@ export function CarouselComments() {
                           </div>
                         </div>
                       </div>
-                      <div className="w-full max-w-md md:-mt-14 md:ml-auto relative md:pl-16 z-10">
+                      <div className="hidden md:block w-full max-w-md md:-mt-14 md:ml-auto relative md:pl-16 z-10">
                         <img
                           src={card.imgPath}
                           alt="Visitors overview graph"
